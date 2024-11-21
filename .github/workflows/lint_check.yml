@@ -25,7 +25,7 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install -y ruby ruby-dev
-        sudo gem install jekyll
+        sudo gem install bundler -v 2.5.23
 
     - name: Install Jekyll and dependencies
       run: |
