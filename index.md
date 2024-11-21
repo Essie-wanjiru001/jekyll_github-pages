@@ -19,4 +19,8 @@ I'm a **Software Engineering Student** with a passion for technology, problem-so
 - 🤖 Diving into Machine Learning Concepts
 - 🌐 Building Meaningful Tech Projects
 
-[View My Projects](/portfolio) | [Read My Blog](/blog)
+[About me](/about)
+[View My Projects](/portfolio)
+[View my skills](/skills)
+[Connect with Me](/contact)
+[Read My Blog](/blog)
