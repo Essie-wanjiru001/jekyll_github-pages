@@ -16,20 +16,30 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v2
       with:
-        node-version: '14'
+        node-version: '18'
 
     - name: Install markdown-link-check
       run: npm install -g markdown-link-check
 
-    - name: Install Jekyll
+    - name: Install Ruby and Bundler
       run: |
         sudo apt-get update
         sudo apt-get install -y ruby ruby-dev
-        gem install jekyll
+        sudo gem install bundler -v 2.5.23
+
+    - name: Set custom GEM_HOME
+      run: |
+        mkdir -p $HOME/.gem
+        echo "GEM_HOME=$HOME/.gem" >> $GITHUB_ENV
+        echo "PATH=$HOME/.gem/bin:$PATH" >> $GITHUB_ENV
+
+    - name: Install Jekyll and dependencies
+      run: |
+        bundle install --path $HOME/.gem
 
     - name: Build the site
       run: |
-        jekyll build
+        bundle exec jekyll build
 
     - name: Check links in Markdown files
       run: |
