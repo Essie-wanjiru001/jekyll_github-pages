@@ -25,7 +25,7 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install -y ruby ruby-dev
-        gem install jekyll
+        sudo gem install jekyll
 
     - name: Build the site
       run: |
