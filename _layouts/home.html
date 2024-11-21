@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+<div class="home">
+    <div class="hero-section">
+        {{ content }}
+    </div>
+
+    {% if site.posts.size > 0 %}
+    <section class="recent-posts">
+        <h2>Latest Blog Posts</h2>
+        {% for post in site.posts limit:3 %}
+            <article>
+                <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+                <p>{{ post.excerpt }}</p>
+                <small>{{ post.date | date: "%B %d, %Y" }}</small>
+            </article>
+        {% endfor %}
+    </section>
+    {% endif %}
+</div>
