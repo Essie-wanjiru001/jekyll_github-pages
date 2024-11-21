@@ -23,7 +23,7 @@ email: esthernjeriwanjiru287@gmail.com
 description: >-
   Personal portfolio and blog showcasing professional journey, 
   technical skills, and creative projects.
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/jekyll_github-pages" # the subpath of your site, e.g. /blog
 url: "https://Essie-wanjiru001.github.io"
 twitter_username: jekyllrb
 github_username:  Essie-wanjiru001
